@@ -14,6 +14,7 @@ int main() {
             d[i] = d[i / 3] + 1;
         }
     }
+    cout << "asd";
     cout << d[n] << '\n';
     return 0;
 }
