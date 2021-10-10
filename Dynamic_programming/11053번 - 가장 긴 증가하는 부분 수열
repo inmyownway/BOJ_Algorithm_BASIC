@@ -1,42 +1,37 @@
 
 #include <iostream>
 using namespace std;
-int a[1000];
-int d[1000];
+int a[1000000];
+int d[1000000];
+
 int main()
 {
  
-
-    int na;
-    
-    cin>>na;
-   
-    for(int i=0;i<na;i++)
+    int n;
+    cin>>n;
+ 
+    for(int i=0;i<n;i++)
     {
         int input;
         cin>>input;
         a[i]=input;
     }
     
-    
-    
-    for(int i=0;i<na;i++)
+    for(int i=0;i<n;i++)
     {
-        d[i]=1;
-        for(int j=0;j<i;j++)
-        {
-            if(a[i]>a[j] && d[i] < d[j]+1)
-                d[i]=d[j]+1;
-        }
+        d[i]=a[i];
+        if(i==0)
+            continue;
+        if(d[i]<d[i-1]+a[i])
+            d[i]=d[i-1]+a[i];
     }
     
-    int max= d[0];
-    for(int i=0;i<na;i++)
+    int max=d[0];
+    for(int i=1;i<n;i++)
     {
-        if(d[i]>max)
+        if(max<d[i])
             max=d[i];
     }
     cout<<max<<endl;
-
 }
 
