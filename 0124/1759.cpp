@@ -22,7 +22,7 @@ int main()
             d[i]=d[i/3]+1;
         }
     }
-    cout<<d[n]<<endl;
+    cout<<d[n];
     return 0;
     
 }
