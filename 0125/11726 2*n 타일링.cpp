@@ -3,7 +3,7 @@
 using namespace std;
 int d[1001];
 int main()
-{//aa
+{//aaadad
     int n;
     cin>>n;
     d[0]=1;
